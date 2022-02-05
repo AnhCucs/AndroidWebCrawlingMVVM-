@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="anhcucs.ninhgiang_hd.jsoupscratch.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsEventFragment"
+            app:destination="@id/detailsEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="anhcucs.ninhgiang_hd.jsoupscratch.fragments.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="anhcucs.ninhgiang_hd.jsoupscratch.fragments.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/detailsEventFragment"
+        android:name="anhcucs.ninhgiang_hd.jsoupscratch.fragments.DetailsEventFragment"
+        android:label="Details Event"
+        tools:layout="@layout/fragment_details_event" >
+        <argument
+            android:name="eventItem"
+            app:argType="anhcucs.ninhgiang_hd.jsoupscratch.data.EventItem" />
+    </fragment>
+</navigation>
